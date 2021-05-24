@@ -1,9 +1,14 @@
 <html>
+
 <head>
     <title>First Web Application</title>
 </head>
+
 <body>
-    Here is the list of your todos:
-    ${todos}
+    Here are the list of ${name}'s todos:
+    ${todos}.
+    <br/>
+<a href="/add-todo">Add a Todo</a>
 </body>
+
 </html>

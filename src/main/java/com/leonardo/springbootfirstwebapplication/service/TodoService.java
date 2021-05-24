@@ -6,6 +6,7 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 
 import com.leonardo.springbootfirstwebapplication.model.Todo;
+
 @Service
 public class TodoService {
     private static List<Todo> todos = new ArrayList<>();
@@ -15,7 +16,8 @@ public class TodoService {
         todos.add(new Todo(1, "admin", "Watch Spring Course", new Date(),
                 false));
         todos.add(new Todo(2, "admin", "Read Clean Code", new Date(), false));
-        todos.add(new Todo(3, "admin", "Quality Assurance", new Date(), false));
+        todos.add(new Todo(3, "admin", "Read Spring Book", new Date(),
+                false));
     }
 
     public List<Todo> retrieveTodos(String user) {
