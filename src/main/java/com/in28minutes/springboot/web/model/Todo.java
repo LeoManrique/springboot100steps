@@ -1,12 +1,13 @@
-package com.leonardo.springbootfirstwebapplication.model;
+package com.in28minutes.springboot.web.model;
+
+import java.util.Date;
 
 import javax.validation.constraints.Size;
-import java.util.Date;
 
 public class Todo {
     private int id;
     private String user;
-
+    
     @Size(min=10, message="Enter at least 10 Characters...")
     private String desc;
 
@@ -14,11 +15,11 @@ public class Todo {
     private boolean isDone;
 
     public Todo() {
-        super();
+    		super();
     }
-
+    
     public Todo(int id, String user, String desc, Date targetDate,
-                boolean isDone) {
+            boolean isDone) {
         super();
         this.id = id;
         this.user = user;
@@ -87,7 +88,10 @@ public class Todo {
             return false;
         }
         Todo other = (Todo) obj;
-        return id == other.id;
+        if (id != other.id) {
+            return false;
+        }
+        return true;
     }
 
     @Override
